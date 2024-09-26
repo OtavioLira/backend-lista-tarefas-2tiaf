@@ -1,20 +1,20 @@
-const express = require("express")
-const router = express.Router()
-const tarefaController = require("../controllers/tarefaController")
+const express = require('express');
+const router = express.Router();
+const tarefaController = require('../controllers/tarefaController');
 
-// Rotas para criar nova tarefa
-router.post("/tarefas", tarefaController.createTarefas)
+// Rota para criar nova tarefa
+router.post('/tarefas', tarefaController.createTarefa);
 
-// Rotas para listar todas as tarefas
-router.get("/tarefas", tarefaController.getTarefas)
+// Rota para listar todas as tarefas
+router.get('/tarefas', tarefaController.getTarefas);
 
-// Rotas para obter uma tarefa especifica
-router.get("/tarefas/:id", tarefaController.getTarefaById)
+// Rota para obter uma tarefa específica
+router.get('/tarefas/:id', tarefaController.getTarefaById);
 
-// Rotas para atualizar uma tarefa
-router.put("/tarefas/:id", tarefaController.updateTarefa)
+// Rota para atualizar uma tarefa
+router.put('/tarefas/:id', tarefaController.updateTarefa);
 
-// Rotas para deletar uma tarefa
-router.delete("/tarefas/:id", tarefaController.deleteTarefa)
+// Rota para deletar uma tarefa
+router.delete('/tarefas/:id', tarefaController.deleteTarefa);
 
 module.exports = router;
